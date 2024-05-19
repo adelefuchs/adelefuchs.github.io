@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #fff;
+    background-color: #a0ecaa;
     color: #333;
 }
 
@@ -78,7 +78,7 @@ nav ul li a:hover {
 }
 
 footer {
-    background-color: #ff8c00;
+    background-color: #54954a;
     color: white;
     text-align: center;
     padding: 1rem 0;
