@@ -3,12 +3,12 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #a0ecaa;
+    background-color: #f0fff0; /* Pale green background */
     color: #333;
 }
 
 header {
-    background-color: #ff8c00;
+    background-color: #32cd32; /* Lime green */
     color: white;
     padding: 1rem 0;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
@@ -35,7 +35,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #ff69b4;
+    color: #ff69b4; /* Neon pink */
 }
 
 .section {
@@ -44,14 +44,14 @@ nav ul li a:hover {
 }
 
 .section:nth-child(even) {
-    background-color: #f0f8ff;
+    background-color: #e0ffe0; /* Lighter pale green */
 }
 
 .section h2 {
     margin-top: 0;
     font-family: 'Indie Flower', cursive;
     font-size: 2.5rem;
-    color: #ff69b4;
+    color: #32cd32; /* Lime green */
 }
 
 .project, .experience {
@@ -68,17 +68,17 @@ nav ul li a:hover {
 }
 
 .project a, .experience a {
-    color: #007BFF;
+    color: #32cd32; /* Lime green */
     text-decoration: none;
     font-weight: bold;
 }
 
 .project a:hover, .experience a:hover {
-    color: #ff69b4;
+    color: #ff69b4; /* Neon pink */
 }
 
 footer {
-    background-color: #54954a;
+    background-color: #32cd32; /* Lime green */
     color: white;
     text-align: center;
     padding: 1rem 0;
@@ -91,11 +91,12 @@ img.profile-pic {
     max-width: 150px;
     border-radius: 50%;
     margin-top: 1rem;
-    border: 5px solid #ff69b4;
+    border: 5px solid #ff69b4; /* Neon pink */
 }
 
 p {
     font-size: 1.2rem;
 }
+
 
 
