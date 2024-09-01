@@ -138,4 +138,21 @@ footer .social-icons a:hover {
     object-fit: cover; /* Ensure the image is cropped properly */
 }
 
+#animation-container {
+    width: 300px; /* Adjust according to your image size */
+    height: 300px;
+    margin: 0 auto; /* Center the container */
+    overflow: hidden;
+    position: relative;
+}
+
+#animated-image {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
 

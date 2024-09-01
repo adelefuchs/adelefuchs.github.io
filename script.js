@@ -47,3 +47,19 @@ window.addEventListener('scroll', function () {
     });
 });
 
+const imageCount = 9;
+let currentImageIndex = 1;
+
+function updateImage() {
+    const image = document.getElementById('animated-image');
+    image.src = `frog${currentImageIndex}.png`;
+
+    currentImageIndex++;
+    if (currentImageIndex > imageCount) {
+        currentImageIndex = 1; // Reset to the first image
+    }
+}
+
+// Set the interval to change the image every 500ms (0.5 seconds)
+setInterval(updateImage, 500);
+
