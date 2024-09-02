@@ -54,7 +54,7 @@ const images = [];
 // Preload images of the frog animation
 for (let i = 1; i <= imageCount; i++) {
     images[i] = new Image();
-    images[i].src = `frog${i}.png`;
+    images[i].src = `images/frog${i}.png`;
 }
 
 function updateImage() {
