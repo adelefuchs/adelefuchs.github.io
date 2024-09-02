@@ -49,10 +49,17 @@ window.addEventListener('scroll', function () {
 
 const imageCount = 9;
 let currentImageIndex = 1;
+const images = [];
+
+// Preload images of the frog animation
+for (let i = 1; i <= imageCount; i++) {
+    images[i] = new Image();
+    images[i].src = `frog${i}.png`;
+}
 
 function updateImage() {
     const image = document.getElementById('animated-image');
-    image.src = `frog${currentImageIndex}.png`;
+    image.src = images[currentImageIndex].src;
 
     currentImageIndex++;
     if (currentImageIndex > imageCount) {
@@ -60,6 +67,9 @@ function updateImage() {
     }
 }
 
-// Set the interval to change the image every 500ms (0.5 seconds)
-setInterval(updateImage, 500);
+// Start the animation loop once all images are preloaded
+window.onload = function() {
+    setInterval(updateImage, 500);
+};
+
 
