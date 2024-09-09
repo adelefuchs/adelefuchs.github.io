@@ -80,6 +80,7 @@ nav ul li a:hover {
 
 .project a:hover, .experience a:hover {
     color: #b1e6a0; 
+}
 
 img.profile-pic {
     max-width: 150px;
@@ -137,7 +138,7 @@ footer .social-icons a:hover {
     object-fit: cover; 
 }
 
-#animation-container {
+/* #animation-container {
     width: 300px; /* Adjust according to your image size */
     height: 300px;
     margin: 0 auto; /* Center the container */
@@ -151,7 +152,4 @@ footer .social-icons a:hover {
     position: absolute;
     top: 0;
     left: 0;
-}
-
-
-
+} */
