@@ -139,9 +139,9 @@ footer .social-icons a:hover {
 }
 
 /* #animation-container {
-    width: 300px; /* Adjust according to your image size */
+    width: 300px; 
     height: 300px;
-    margin: 0 auto; /* Center the container */
+    margin: 0 auto; 
     overflow: hidden;
     position: relative;
 }
