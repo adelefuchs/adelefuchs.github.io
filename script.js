@@ -45,29 +45,29 @@ document.addEventListener("DOMContentLoaded", function () {
 //     });
 // });
 
-// const imageCount = 9;
-// let currentImageIndex = 1;
-// const images = [];
+const imageCount = 9;
+let currentImageIndex = 1;
+const images = [];
 
-// // Preload images of the frog animation
-// for (let i = 1; i <= imageCount; i++) {
-//     images[i] = new Image();
-//     images[i].src = `frog${i}.png`;
-// }
+// Preload images of the frog animation
+for (let i = 1; i <= imageCount; i++) {
+    images[i] = new Image();
+    images[i].src = `images/frog${i}.jpeg`;
+}
 
-// function updateImage() {
-//     const image = document.getElementById('animated-image');
-//     image.src = images[currentImageIndex].src;
+function updateImage() {
+    const image = document.getElementById('animated-image');
+    image.src = images[currentImageIndex].src;
 
-//     currentImageIndex++;
-//     if (currentImageIndex > imageCount) {
-//         currentImageIndex = 1; // Reset to the first image
-//     }
-// }
+    currentImageIndex++;
+    if (currentImageIndex > imageCount) {
+        currentImageIndex = 1; // Reset to the first image
+    }
+}
 
-// // Start the animation loop once all images are preloaded
-// window.onload = function() {
-//     setInterval(updateImage, 500);
-// };
+// Start the animation loop once all images are preloaded
+window.onload = function() {
+    setInterval(updateImage, 500);
+};
 
 
