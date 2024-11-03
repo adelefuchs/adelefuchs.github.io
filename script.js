@@ -1,73 +1,78 @@
 document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('nav ul li a').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
+    const pages = document.querySelectorAll('.scrapbook-page');
+    const tabLinks = document.querySelectorAll('.nav-tabs a');
+    let currentIndex = 0;
+    
+    // Function to show only the active page
+    function showPage(index) {
+        pages.forEach((page, i) => {
+            page.classList.remove('active');
+            if (i === index) {
+                page.classList.add('active');
+            }
+        });
+        currentIndex = index; // Update current index
+    }
+
+    // Add click event listener to each tab link
+    tabLinks.forEach((tab, index) => {
+        tab.addEventListener('click', (e) => {
             e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
+            showPage(index); // Display the corresponding page
         });
     });
-});
 
-// Typing effect for the welcome message
-document.addEventListener("DOMContentLoaded", function () {
-    const text = "Welcome to My Portfolio";
-    let index = 0;
-    const speed = 100;
+    // Drag functionality variables
+    let isDragging = false;
+    let startX;
+    let currentX;
 
-    function typeWriter() {
-        if (index < text.length) {
-            document.querySelector("#home h1").innerHTML += text.charAt(index);
-            index++;
-            setTimeout(typeWriter, speed);
+    // Function to handle mouse down
+    function handleMouseDown(event) {
+        isDragging = true;
+        startX = event.clientX; // Get the initial mouse position
+        currentX = startX; // Set current position to start
+    }
+
+    // Function to handle mouse move
+    function handleMouseMove(event) {
+        if (!isDragging) return;
+
+        currentX = event.clientX; // Update current mouse position
+        let xDiff = currentX - startX; // Calculate the difference
+
+        if (Math.abs(xDiff) > 100) { // Check if the drag is significant
+            if (xDiff > 0) {
+                goPrevious(); // Dragging to the right
+            } else {
+                goNext(); // Dragging to the left
+            }
+            isDragging = false; // Reset dragging state
         }
     }
-    typeWriter();
-});
 
-// // Scrollspy effect
-// window.addEventListener('scroll', function () {
-//     let sections = document.querySelectorAll('section');
-//     let navLinks = document.querySelectorAll('nav ul li a');
-
-//     sections.forEach(section => {
-//         let top = window.scrollY;
-//         let offset = section.offsetTop - 150;
-//         let height = section.offsetHeight;
-//         let id = section.getAttribute('id');
-
-//         if (top >= offset && top < offset + height) {
-//             navLinks.forEach(link => {
-//                 link.classList.remove('active');
-//                 document.querySelector('nav ul li a[href*=' + id + ']').classList.add('active');
-//             });
-//         }
-//     });
-// });
-
-const imageCount = 9;
-let currentImageIndex = 1;
-const images = [];
-
-// Preload images of the frog animation
-for (let i = 1; i <= imageCount; i++) {
-    images[i] = new Image();
-    images[i].src = `images/frog${i}.jpeg`;
-}
-
-function updateImage() {
-    const image = document.getElementById('animated-image');
-    image.src = images[currentImageIndex].src;
-
-    currentImageIndex++;
-    if (currentImageIndex > imageCount) {
-        currentImageIndex = 1; // Reset to the first image
+    // Function to handle mouse up
+    function handleMouseUp() {
+        isDragging = false; // Reset dragging state
     }
-}
 
-// Start the animation loop once all images are preloaded
-window.onload = function() {
-    setInterval(updateImage, 500);
-};
+    function goNext() {
+        if (currentIndex < pages.length - 1) {
+            showPage(currentIndex + 1);
+        }
+    }
 
+    function goPrevious() {
+        if (currentIndex > 0) {
+            showPage(currentIndex - 1);
+        }
+    }
 
+    // Attach mouse event listeners
+    document.addEventListener('mousedown', handleMouseDown, false);
+    document.addEventListener('mousemove', handleMouseMove, false);
+    document.addEventListener('mouseup', handleMouseUp, false);
+
+    // Show the first page initially
+    showPage(currentIndex);
+});

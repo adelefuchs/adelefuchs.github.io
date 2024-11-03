@@ -1,0 +1,45 @@
+/* styles/ScrapbookPage.css */
+.scrapbook-page {
+    position: relative;
+    width: 90%;
+    height: 90vh;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .photo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 150px;
+    border-radius: 50%;
+  }
+  
+  .intro-text {
+    position: absolute;
+    top: 200px;
+    left: 40px;
+    font-family: 'Handwritten Font', cursive; /* Choose a playful, handwritten font */
+    font-size: 1.5rem;
+  }
+  
+  .sticker {
+    position: absolute;
+    background-color: rgba(255, 255, 0, 0.6); /* yellow sticker effect */
+    font-family: 'Comic Sans MS', cursive;
+    padding: 10px;
+    border-radius: 4px;
+  }
+  
+  .sticker1 {
+    top: 300px;
+    left: 50px;
+  }
+  
+  .sticker2 {
+    top: 380px;
+    left: 80px;
+  }
+  

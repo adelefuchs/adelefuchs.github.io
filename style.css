@@ -1,155 +1,151 @@
+/* General styles */
 body {
-    font-family: 'Anonymous Pro', monospace;
+    perspective: 1000px; /* Create a perspective for 3D effect */
+    font-family: 'Roboto', sans-serif;
+    background-color: #fdf6e3;
+    color: #333;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    background-color: #f0fff0; 
-    color: #333;
+    background-image: url('images/notebook-background.png'); /* Set a background with lined or grid notebook paper */
+    background-size: cover;
 }
 
+/* Header */
 header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    background-color: #2b3186; 
-    padding: 10px 0;
-    box-shadow: 0px 4px 2px -2px gray; /* Adds a shadow to distinguish the header */
+    background: #f4d4a3;
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 5px solid #c78b3a;
 }
 
+.main-title {
+    font-family: 'Pacifico', cursive;
+    color: #3b3a30;
+    font-size: 2.5rem;
+    margin: 0;
+}
 
-nav ul {
+/* Navigation Tabs */
+.nav-tabs {
     list-style: none;
+    padding: 0;
     display: flex;
     justify-content: center;
-    padding: 0;
-    margin: 0;
+    margin-top: 1rem;
 }
 
-nav ul li {
+.nav-tabs li {
     margin: 0 1rem;
 }
 
-nav ul li a {
-    color: white;
+.nav-tabs a {
     text-decoration: none;
+    color: #3b3a30;
     font-weight: bold;
-    font-family: 'Anonymous Pro', monospace;
-    transition: color 0.3s;
+    font-size: 1.1rem;
 }
 
-nav ul li a:hover {
-    color: #abecb9; /* Neon pink */
+.nav-tabs a:hover {
+    text-decoration: underline;
 }
 
-.section {
-    padding: 3rem;
-    text-align: center;
-}
-
-.section:nth-child(even) {
-    background-color: #e0ffe0; /* Lighter pale green */
-}
-
-.section h2 {
-    margin-top: 0;
-    font-family: 'Anonymous Pro', monospace;
-    font-size: 2.5rem;
-    color: #2b3186; 
-}
-
-.project, .experience {
-    margin: 2rem 0;
-    background-color: #fff;
-    padding: 1rem;
-    border-radius: 15px;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
-}
-
-.project:hover, .experience:hover {
-    transform: scale(1.05);
-}
-
-.project a, .experience a {
-    color: #32cd32; 
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.project a:hover, .experience a:hover {
-    color: #b1e6a0; 
-}
-
-img.profile-pic {
-    max-width: 150px;
-    border-radius: 50%;
-    margin-top: 1rem;
-    border: 5px solid #2b3186; 
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* Smooth scrolling */
-html {
-    scroll-behavior: smooth;
-}
-
-
-footer {
-    position: static;
-    background-color: #2b3186; 
-    color: white;
-    text-align: center;
-    padding: 1rem 0;
-}
-
-footer .social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-}
-
-footer .social-icons a {
-    color: white;
-    font-size: 1.5rem;
-    transition: color 0.3s;
-}
-
-footer .social-icons a:hover {
-    color: #bbf7b3; 
-}
-
-
-#profile-pic-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px; 
-}
-
-#profile-pic {
-    border-radius: 50%;
-    border: 5px solid #2b3186; 
-    width: 150px; 
-    height: 150px;
-    object-fit: cover; 
-}
-
-/* #animation-container {
-    width: 300px; 
-    height: 300px;
-    margin: 0 auto; 
-    overflow: hidden;
+/* Scrapbook Page Style */
+.scrapbook-page {
+    display: none;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    width: 80%;
+    max-width: 800px;
+    background: #fff5e1;
+    background-image: url('images/nb.png');
+    background-size: cover; /* This makes the image cover the container */
+    background-position: center; /* Centers the image within the container */
+    background-repeat: no-repeat; /* Prevents the image from tiling */
+    border: 2px dashed #c78b3a;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     position: relative;
+    transition: transform 0.6s ease;
+    /*backface-visibility: hidden;  Hide the back side of the page */
+    transform-style: preserve-3d; /* Preserve 3D for children */
+    opacity: 0; /* Start hidden */
+    z-index: 0; /* Base layer */
 }
 
-#animated-image {
-    width: 100%;
-    height: auto;
-    position: absolute;
-    top: 0;
+
+
+/* Section Titles */
+.section-title {
+    font-family: 'Pacifico', cursive;
+    font-size: 2rem;
+    color: #c78b3a;
+    border-bottom: 2px dashed #c78b3a;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Profile Picture */
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: block;
+    margin: 1rem auto;
+    border: 4px solid #c78b3a;
+}
+
+/* Content Styles */
+.intro-text,
+.content-text,
+.project-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.project,
+.experience {
+    background: #f9e8d4;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Links */
+a {
+    color: #3b3a30;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #c78b3a;
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #f4d4a3;
+    border-top: 5px solid #c78b3a;
+    font-size: 0.9rem;
+}
+/* Active page styling */
+.scrapbook-page.active {
+    display: block; /* Show only the active page */
+    transform: rotateY(0);
     left: 0;
-} */
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.scrapbook-page.previous {
+    transform: translateX(-100%);
+    transform: rotateY(-180deg); 
+}
+
+.scrapbook-page.next {
+    transform: translateX(100%);
+    transform: rotateY(180deg);
+}

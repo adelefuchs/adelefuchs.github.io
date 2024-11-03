@@ -3,39 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adele's Portfolio</title>
+    <title>Adele's Scrapbook Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
+        <h1 class="main-title">Adele's Scrapbook</h1>
         <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#contact">Contact</a></li>
+            <ul class="nav-tabs">
+                <li><a href="#home" data-index="0">Home</a></li>
+                <li><a href="#about" data-index="1">About Me</a></li>
+                <li><a href="#projects" data-index="2">Projects</a></li>
+                <li><a href="#experience" data-index="3">Experience</a></li>
+                <li><a href="#contact" data-index="4">Contact</a></li>
             </ul>
         </nav>
+        
     </header>
 
-    <section id="home"  class="welcome-section">
-        <h1> </h1>
-        <img src="images/frog1.jpeg" alt="Profile" class="profile-pic">
-        <p>Hello there! Thanks for visiting my profile! Scroll or click the tabs above to learn more about me!</p>
-        <div id="animation-container">
-            <img id="animated-image" src="images/frog1.jpeg" alt="Animated Frog">
-        </div>
+    <section id="home" class="welcome-section scrapbook-page">
+        <h2 class="section-title">Welcome!</h2>
+        <img src="images/profile.jpg" alt="Profile Picture" class="profile-pic">
+        <p class="intro-text">Hi there! Welcome to my scrapbook-style portfolio. Explore each page to get a glimpse of my experiences, projects, and more!</p>
     </section>
 
-    <section id="about" class="section">
-        <h2>About Me</h2>
-        <p>I am a Computer Science student with a strong interest in software development, algorithms, and machine learning. I enjoy solving complex problems and building innovative solutions.</p>
+    <section id="about" class="scrapbook-page">
+        <h2 class="section-title">About Me</h2>
+        <p class="content-text">I'm a Computer Science student passionate about algorithms, software development, and creative problem-solving. I enjoy working on projects that push boundaries and enhance my skills.</p>
     </section>
 
-    <section id="projects" class="section">
-        <h2>Projects</h2>
+    <section id="projects" class="scrapbook-page">
+        <h2 class="section-title">Projects</h2>
         <div class="project">
             <h3>Ready Set Prep</h3>
             <p>Web app designed to simplify for meal planning and recipe management through price transparency, and encourage social collaboration in meal preparation activities. Developed 
@@ -45,6 +44,7 @@
         </div>
         <div class="project">
             <h3>15 Puzzle Solver</h3>
+            <p>Using beam and A* searches.</p>
             <p>Artificial intelligence project to solve a 15 puzzle and output the shortest sequence of moves needed to solve the puzzle instance. Implemented using both beam and A* searches.</p>
             <a href="https://github.com/adelefuchs/15-Puzzle-Solver" target="_blank">View on GitHub</a>
         </div>
@@ -59,15 +59,10 @@
             <a href="https://github.com/yourusername/project2" target="_blank">View on GitHub</a>
         </div>
         <!-- <div class="project">
-            <h3>Progressive</h3>
-            <p>Description of the project, technologies used, and challenges faced.</p>
-            <a href="https://github.com/yourusername/project2" target="_blank">View on GitHub</a>
-        </div> -->
-        <div class="project">
             <h3>TCP Project</h3>
             <p> Project for networks class. Involved setting up TCP protocol for communications between different nodes.</p>
             <a href="https://github.com/yourusername/project2" target="_blank">View on GitHub</a>
-        </div>
+        </div> -->
         <div class="project">
             <h3>Matching game</h3>
             <p> Tile flipping memory game developed for full stack web development class.</p>
@@ -75,12 +70,13 @@
                 <span>See the Pen <a href="https://codepen.io/adelefuchs/pen/PoyWewG">
                 Memory Game</a> by Adele Fuchs (<a href="https://codepen.io/adelefuchs">@adelefuchs</a>)
                 on <a href="https://codepen.io">CodePen</a>.</span>
-              </p>
-              <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+                </p>
+                <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
         </div>
+        
     </section>
 
-    <section id="experience" class="section">
+    <section id="experience" class="scrapbook-page">
         <h2>Experience</h2>
         <div class="experience">
             <h3>Software Engineering Intern</h3>
@@ -95,17 +91,14 @@
         </div>
     </section>
 
-    <section id="contact" class="section">
-        <h2>Contact</h2>
-        <p>If you'd like to get in touch, feel free to email me at <a href="mailto:adelefuchs7@gmail.com">adelefuchs7@gmail.com</a> or connect with me on <a href="https://www.linkedin.com/in/adele-fuchs-203713225/" target="_blank">LinkedIn</a>.</p>
+    <section id="contact" class="scrapbook-page">
+        <h2 class="section-title">Contact</h2>
+        <p>Feel free to reach out via email at <a href="mailto:adelefuchs7@gmail.com">adelefuchs7@gmail.com</a> or connect with me on <a href="https://www.linkedin.com/in/adele-fuchs-203713225/" target="_blank">LinkedIn</a>.</p>
     </section>
 
     <footer>
         <p>&copy; 2024 Adele Fuchs. All rights reserved.</p>
     </footer>
-
     <script src="script.js"></script>
 </body>
 </html>
-
-
