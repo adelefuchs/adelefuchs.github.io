@@ -87,11 +87,13 @@ header {
 
 /* Profile Picture */
 .profile-pic {
-    width: 150px;
-    height: 150px;
+    width: 100%;
+    max-width: 150px;
+    height: auto;
     border-radius: 50%;
+    object-fit: contain;
     display: block;
-    margin: 1rem auto;
+    margin: 0 auto;
     border: 4px solid #c78b3a;
 }
 
